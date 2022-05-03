@@ -32,7 +32,7 @@ console.log(howToSharePizza(2));
 const pii = {
     firstName: "John",
     lastName: "Doe",
-    SSN:() => {
+    SSN:function () {
         const ssnNumbers = 568234563;
         return "SSN is Private and cant be viewed."
     },
@@ -43,3 +43,27 @@ const pii = {
 console.log(pii.fullName());
 console.log(pii.SSN());
 //Very Hard
+class person {
+    constructor (fullName, job, age) {
+        this.fullName = fullName;
+        this.job = job;
+        this.age = age;
+    }
+    workingOut () {
+        return console.log ("Running is fun!")
+    }
+    fetchJob () {
+        return `${this.fullName} is a ${this.job}`
+    }
+}
+class programmer {
+    constructor (fullName, job, age, language) {
+        person.call(fullName, job, age);
+        this.language = language;
+        this.busy=true;
+    }
+}
+
+const idPerson = new programmer ("Osvaldo Ruiz", "Developer",24,"Spanish");
+
+idPerson.exercise()
