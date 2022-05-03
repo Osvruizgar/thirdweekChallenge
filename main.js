@@ -64,6 +64,6 @@ class programmer {
     }
 }
 
-const idPerson = new programmer ("Osvaldo Ruiz", "Developer",24,"Spanish");
+const idPerson = new person ("Osvaldo Ruiz", "Developer",24,"Spanish");
 
-idPerson.exercise()
+person.workingOut()
